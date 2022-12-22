@@ -53,7 +53,6 @@ app.get('/posts/:testing', (req,res)=> {
     posts.forEach((item)=>{
         const itemTitle = _.lowerCase(item.title)
         if (itemTitle === dummytext){
-            console.log("matched")
             res.render('post', {postHead:item.title,postContent:item.content})
             
         }
